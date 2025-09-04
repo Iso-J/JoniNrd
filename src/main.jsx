@@ -4,11 +4,6 @@ import './index.css'
 import './tietoa.css'
 import App from './App.jsx'
 
-function unload(){
-    alert("aaaa");
-    document.body.style = "";
-}
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
