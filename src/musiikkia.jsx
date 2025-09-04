@@ -13,14 +13,14 @@ function Musiikkia() {
                         <div>
                             <p>Tie avaruuteen</p>
                             <audio controls>
-                                <source src="audio/tieavaruuteennayte.wav" type="audio/wav"></source>
+                                <source src="./audio/tieavaruuteennayte.wav" type="audio/wav"></source>
                             </audio>
                         </div>
 
                         <div>
                             <p>Nimetön1</p>
                             <audio controls>
-                                <source src="audio/nimeton1.wav" type="audio/wav"></source>
+                                <source src="./audio/nimeton1.wav" type="audio/wav"></source>
                             </audio>
                         </div>
                     </div>
