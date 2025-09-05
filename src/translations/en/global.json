@@ -8,5 +8,12 @@
     },
     "pelit":{
         "takecareofhorsedesc": "Take care of horse is a game where you care for a horse. Its voice soothes, and nourishes you, giving you an intent to care for it."
+    },
+    "tietoa":{
+        "tietoa": "Hey, welcome to my site! I'll put here blogs, which contain, what I've been up to. Music if I want to show it, and games that I have developed! Hope you have a good time visiting my site! You can change language and site's theme by the upper-right corner!"
+    },
+    "blogi":{
+        "kirjoittanut": "Written by",
+        "aika": "at"
     }
 }

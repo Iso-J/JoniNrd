@@ -14,8 +14,9 @@ function Tietoa() {
                     <div className={`background`}>
                         <div className='content'>
                             <div className='title'>{t("header.tietoa")}</div>
-                            <div>
-                            </div>
+                            <p>
+                                {t("tietoa.tietoa")}
+                            </p>
                         </div>
                     </div>
                 </div>

@@ -8,5 +8,12 @@
     },
     "pelit":{
         "takecareofhorsedesc": "Take care of horse on peli missä huollat hevostasi. Sen äänensä rauhoittaa, ja täyttää sinua, mikä aiheuttaa sinulle intohimon pitää huolta siitä."
+    },
+    "tietoa":{
+        "tietoa": "Hei, Tervetuloa sivuuni! Pistän tänne blogi päivityksiä, mitkä sisältävät, mitä olen ollut tekeillä. Musiikkia jos haluan esitellä sitä, ja pelejä mitä olen kehittänyt! Toivottavasti sinulla on hauskaa sivustossani! \n Voit vaihtaa kieltä tai teemaa oikea-ylä nurkasta."
+    },
+    "blogi":{
+        "kirjoittanut": "Kirjoittanut",
+        "aika": "aika"
     }
 }
