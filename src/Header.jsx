@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
-import moonTheme from './Moon.png';
-import sunTheme from './Sun.png';
+import moonTheme from '../public/Moon.png';
+import sunTheme from '../public/Sun.png';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
