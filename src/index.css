@@ -1,6 +1,4 @@
-
-
-.dark{
+.dark {
   filter: invert(95%) hue-rotate(180deg);
 }
 
@@ -14,7 +12,7 @@ body {
   background-color: rgb(216, 216, 216);
 }
 
-.darkBody{
+.darkBody {
   background-color: rgb(37, 37, 37);
 }
 
@@ -29,11 +27,71 @@ body {
   z-index: 1000;
 }
 
-.header .title {
-
+.headerTitle {
+  display: flex;
+  background-color: rgb(100, 100, 100);
+  align-items: center;
+  margin: 0;
+  padding: 0%;
+  top: 0;
+  position: sticky;
+  z-index: 1000;
 }
 
-.navTitleButton{
+.allNavButtons {
+  display: flex;
+  background-color: rgb(100, 100, 100);
+  align-items: center;
+  margin: 0;
+  padding: 0%;
+  top: 0;
+  position: sticky;
+  z-index: 1000;
+  width: 100%;
+}
+
+.dropdown{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(100, 100, 100);
+  align-items: right;
+  margin: 0;
+  padding: 0%;
+  top: 0;
+  z-index: 1000;
+  width: 50%;
+  position: sticky;
+  float: right;
+}
+
+.allNavDropdownButtons {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(100, 100, 100);
+  align-items: right;
+  margin: 0;
+  padding: 0%;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  float: right;
+}
+
+.allNavDropdownButtons .navButton {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+  border: #000000 1px solid;
+  border-radius: 10px;
+  user-select: none;
+  text-align: right;
+  width: auto;
+}
+
+
+.navTitleButton {
   color: black;
   background-color: #991010;
   padding: 23px;
@@ -45,10 +103,10 @@ body {
   border-bottom-left-radius: 0%;
   text-decoration: none;
   user-select: none;
-  
+
 }
 
-.navButton{
+.navButton {
   background-color: #f1f1f1;
   padding: 20px;
   font-size: 30px;
@@ -59,31 +117,53 @@ body {
   user-select: none;
 }
 
-.navButton:hover, .navTitleButton:hover {
+.navButton:hover,
+.navTitleButton:hover {
   filter: brightness(85%);
 }
 
-.lang{
+.lang {
   margin-left: auto;
-  margin-right: 15px;
   text-align: right;
+  cursor: pointer;
 }
 
-div .langSize{
-  font-size: 5rem;
+.allNavDropdownButtons .lang {
+  cursor: pointer;
+  width: 100px;
 }
 
-.theme{
-  margin-right: 15px;
+.theme {
+  margin-right: 0;
+  text-align: right;
+  cursor: pointer;
 }
 
-.header button{
+.langThemeButtons{
+  display: flex;
+
+}
+
+.allNavDropdownButtons .theme {
+  margin-right: 0;
+  text-align:unset;
+  cursor: pointer;
+  font-size: 0.1rem;
+  float: right;
+}
+
+.header button {
   color: black;
   font-weight: initial;
   background-color: transparent;
 }
 
-.header .logo{
+.header .logo {
+  margin-left: auto;
+  width: 60px;
+}
+
+.logo {
   width: 60px;
 }
 
@@ -97,14 +177,9 @@ h1 {
 }
 
 button {
-  font-size: 1.7rem;
-  font-weight: bold;
-  padding: 10px 20px;
-  color: white;
+  color: transparent;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.5s ease;
 }
 
 .add-button {
@@ -165,8 +240,28 @@ li {
   margin-left: 10px;
 }
 
-.footer{
+.footer {
   margin-top: 25px;
   margin-bottom: 25px;
   text-align: center;
+}
+
+.navDropDown {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .allNavButtons {
+    display: none;
+  }
+
+  .navDropDown {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 4rem;
+  }
+  .dropDownButton{
+    font-size: 4rem;
+  }
 }

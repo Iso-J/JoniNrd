@@ -1,0 +1,1 @@
+export {HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';

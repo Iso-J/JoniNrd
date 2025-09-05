@@ -1,4 +1,4 @@
-.app .background{
+.app .background {
     margin-left: 65px;
     margin-right: 65px;
     background-color: rgb(255, 255, 255);
@@ -6,12 +6,12 @@
     border-radius: 30px;
     border-top-left-radius: 0%;
     border-top-right-radius: 0%;
-    display:flow-root;
+    display: flow-root;
     justify-items: center;
     text-align: center;
 }
 
-.app .title{
+.app .title {
     display: block;
     width: 100%;
     flex-grow: 2;
@@ -21,7 +21,7 @@
     border-radius: 2px;
 }
 
-.app .title2{
+.app .title2 {
     display: ruby-base;
     width: 100%;
     font-size: 1.4rem;
@@ -31,14 +31,21 @@
     margin-top: 25px;
 }
 
-.app .content{
+.app .content {
     margin: 20px;
 }
 
-.app p{
+.app p {
     margin: 20px;
 }
 
-.app .game{
-    
+.app .game {}
+
+@media only screen and (max-width: 900px) {
+    .app .background {
+        margin-left: 0px;
+        margin-right: 0px;
+        background-color: rgb(255, 255, 255);
+        min-height: 75vh;
+    }
 }
