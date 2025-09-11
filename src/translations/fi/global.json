@@ -4,7 +4,8 @@
         "projektit":"Projektit",
         "pelit":"Pelit",
         "musiikkia":"Musiikkia",
-        "blogi":"Blogi"
+        "blogi":"Blogi",
+        "luoBlogi":"Luo blogi"
     },
     "pelit":{
         "takecareofhorsedesc": "Take care of horse on peli missä huollat hevostasi. Sen äänensä rauhoittaa, ja täyttää sinua, mikä aiheuttaa sinulle intohimon pitää huolta siitä."

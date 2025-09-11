@@ -4,13 +4,14 @@ import sunTheme from '../public/Sun.png';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-function Header({ toggled, setToggled, DropdownActive, setDropDown}) {
+function Header({ toggled, setToggled, DropdownActive, setDropDown }) {
     const { t, i18n } = useTranslation("global");
     const handleClick = () => {
         setToggled((s) => !s);
     };
     const languages = ['en', 'fi'];
     const [currentLanguageIndex, setCurrentIndex] = useState(1);
+    const inDev = import.meta.env.MODE === 'development';
 
     const setLanguage = () => {
         const nextIndex = (currentLanguageIndex + 1) % languages.length;
@@ -49,6 +50,11 @@ function Header({ toggled, setToggled, DropdownActive, setDropDown}) {
                     <Link draggable="false" to="/blogi" className={`navButton`}>
                         <div >{t("header.blogi")}</div>
                     </Link>
+                    {inDev && (
+                        <Link draggable="false" to="/luoBlogi" className={`navButton`}>
+                            <div >{t("header.luoBlogi")}</div>
+                        </Link>
+                    )}
                     <div className={`lang${toggled ? " dark" : ""}`}>
                         <button onClick={setLanguage}>
                             <div className='langSize'>

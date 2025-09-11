@@ -3,6 +3,8 @@ import Musiikkia from './musiikkia.jsx';
 import Tietoa from './tietoa.jsx';
 import Pelit from './pelit.jsx';
 import Blogi from './blogi.jsx';
+import LuoBlogi from './LuoBlogi.jsx';
+import BlogView from './BlogView.jsx';
 import React, { useEffect } from 'react';
 import {HashRouter as Router, Routes, Route, useLocation  } from 'react-router-dom';
 import Footer from './Footer.jsx';
@@ -44,7 +46,9 @@ function App() {
           <Route path="/tietoa"element={<Tietoa/>}/>
           <Route path="/musiikkia"element={<Musiikkia/>}/>
           <Route path="/pelit"element={<Pelit toggled={toggled}/>}/>
-          <Route path="/blogi"element={<Blogi/>}/>
+          <Route path="/blogi"element={<Blogi toggled={toggled}/>}/>
+          <Route path="/luoBlogi"element={<LuoBlogi/>}/>
+          <Route path="/blogView/:id"element={<BlogView toggled={toggled}/>}/>
         </Routes>
         <Footer/>
         </I18nextProvider>
