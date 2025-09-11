@@ -10,14 +10,24 @@ import { Link } from 'react-router-dom';
 function Blogi({ toggled }) {
     const { t, i18n } = useTranslation("global");
     const inDev = import.meta.env.MODE === 'development';
-    const path = inDev? '../data/db.json' : '../public/data/db.json';
+    const path = inDev ? '../data/db.json' : '/JoniNrd/data/db.json';
     const [allPosts, setAllPosts] = useState("");
-    const [groupedPosts, setg] = useState("");
+    const [groupedPosts, setGroupedPosts] = useState("");
     useEffect(() => {
         const loadPosts = async () => {
             try {
-                const data = await import(path); // Try to load
-                setAllPosts(data.posts);
+                if (inDev) {
+                    const data = await import(path); // Try to load
+                    setAllPosts(data.posts);
+                }
+                else {
+                    const base = import.meta.env.BASE_URL;
+                    const response = await fetch(`${path}`); // Try to load
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const data = await response.json();
+                    console.log(data);
+                    setAllPosts(data.posts);
+                }
                 // use data.posts here
             } catch (error) {
                 console.error("Could not load JSON file:", error);
@@ -27,28 +37,28 @@ function Blogi({ toggled }) {
 
         loadPosts();
     }, []);
-    useEffect(() =>{
+    useEffect(() => {
         if (!Array.isArray(allPosts)) return;
 
-    const sortedPosts = [...allPosts].sort((a, b) => b.id - a.id);
+        const sortedPosts = [...allPosts].sort((a, b) => b.id - a.id);
 
-    const grouped = sortedPosts.reduce((acc, post) => {
-      if (!acc[post.category]) {
-        acc[post.category] = {};
-      }
+        const grouped = sortedPosts.reduce((acc, post) => {
+            if (!acc[post.category]) {
+                acc[post.category] = {};
+            }
 
-      if (!acc[post.category][post.language]) {
-        acc[post.category][post.language] = [];
-      }
+            if (!acc[post.category][post.language]) {
+                acc[post.category][post.language] = [];
+            }
 
-      acc[post.category][post.language].push(post);
+            acc[post.category][post.language].push(post);
 
-      return acc;
-    }, {});
+            return acc;
+        }, {});
 
-    setGroupedPosts(grouped);
-  }, [allPosts]);
-    
+        setGroupedPosts(grouped);
+    }, [allPosts]);
+
     return (
         <>
             <div className='app'>
@@ -74,7 +84,9 @@ function Blogi({ toggled }) {
                                                                             <img src={post.img ? post.img : null} className={``}></img>
                                                                         </div>
                                                                         <br />
-                                                                        <h4>{post.title}</h4>
+                                                                        <h3>{post.title}</h3>
+                                                                        <h4>{t("blogi.kirjoittanut")} JoniNrd</h4>
+                                                                        <h4>{t("blogi.aika")} {post.createdDate}</h4>
                                                                     </li>
                                                                 </Link>
                                                             </>

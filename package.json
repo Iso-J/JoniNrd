@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "prebuild": "node scripts/copy-json.js",
-    "build": "vite build && react-scripts build",
+    "build": "vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint .",
