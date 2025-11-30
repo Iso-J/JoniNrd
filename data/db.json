@@ -69,6 +69,16 @@
       "category": "blogi.category.websiteupdates",
       "language": "en",
       "createdDate": "03:51 14.09.2025"
+    },
+    {
+      "id": "8",
+      "img": "images/norsu.gif",
+      "title": "Norsu",
+      "body": "Pikku näyttö norsusta",
+      "author": "JoniNrd",
+      "category": "Fanttila devBlog",
+      "language": "fi",
+      "createdDate": "02:28 30.11.2025"
     }
   ]
 }
