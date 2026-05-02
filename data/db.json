@@ -79,6 +79,17 @@
       "category": "Fanttila devBlog",
       "language": "fi",
       "createdDate": "02:28 30.11.2025"
+    },
+    {
+      "id": "f9NqSyFAre8",
+      "img": "images/mostCoder.jpeg",
+      "title": "GRIT:LAB PISCINE EXPERIENCE",
+      "body": "Hey guys,\n\nI've recently completed the grit:lab piscine in Åland. It was the most fun and social 3.5 weeks in my life.\nI met a lot of people in there. It was very fun to work with my classmates. \nI also got awarded the \"best coder\" award. People were shouting my name before the award winner was even annouced.\nI had to give a small speech, but thankfully I had two glasses of wine before I did it. \nI am thankful for all my classmates and hope they also get into the 2 year program.",
+      "author": "JoniNrd",
+      "category": "blogi.category.other",
+      "language": "en",
+      "createdDate": "15:12 02.05.2026"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
