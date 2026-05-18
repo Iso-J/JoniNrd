@@ -6,9 +6,12 @@ import { post_fi } from './blogEntries/languages/fi/post.js';
 import global_fi from "./translations/fi/global.json";
 import global_en from "./translations/en/global.json";
 
+const savedLanguage = localStorage.getItem('language')
+
 i18next
 .use(LanguageDetector)
 .init({
+  lng: savedLanguage,
   interpolation:{escapeValue:false},
   fallbackLng: 'en',
   resources:{

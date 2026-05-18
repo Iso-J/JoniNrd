@@ -23,6 +23,12 @@ function Musiikkia() {
                                 <source src="./audio/nimeton1.wav" type="audio/wav"></source>
                             </audio>
                         </div>
+                        <div>
+                            <p>aabb</p>
+                            <audio controls>
+                                <source src="./audio/aabb.mp3" type="audio/wav"></source>
+                            </audio>
+                        </div>
                     </div>
                 </div>
             </div>

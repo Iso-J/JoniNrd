@@ -15,6 +15,12 @@
     },
     "blogi":{
         "kirjoittanut": "Kirjoittanut",
-        "aika": "Aika"
+        "aika": "Aika",
+        "uusin": "Uusin postaus",
+        "sisalto": "Kategoriat",
+        "category":{
+            "websiteupdates" : "Sivu päivityksiä",
+            "other": "muu"
+        }
     }
 }

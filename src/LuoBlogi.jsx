@@ -11,7 +11,9 @@ function LuoBlogi() {
     }
     const categories = [
         'Take care of horse devBlog',
-        'Website updates',
+        'Fanttila devBlog',
+        'blogi.category.websiteupdates',
+        'blogi.category.other',
     ];
     const { posts: postsRaw } = postsData;
     const posts = [...postsRaw].reverse();
@@ -63,7 +65,7 @@ function LuoBlogi() {
             createdDate: getCurrentDate(),
         };
 
-        fetch('http://localhost:8000/posts', {
+        fetch('http://localhost:3000/posts', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(blog)
@@ -116,7 +118,8 @@ function LuoBlogi() {
                                 value={title}
                                 onChange={(e) => setTitle(e.target.value)}
                             />
-                            <input type='text' required
+                            <textarea
+                                required
                                 value={body}
                                 onChange={(e) => setBody(e.target.value)}
                             />
@@ -128,7 +131,7 @@ function LuoBlogi() {
                                 value={category}
                                 onChange={(e) => setCategory(e.target.value)}>
                                 {categories.map((val, index) => (
-                                    <option key={index} value={val}>{val}</option>
+                                    <option key={index} value={val}>{t(val)}</option>
                                 ))}
                             </select>
                             <select
@@ -153,9 +156,11 @@ function LuoBlogi() {
                             <button>Create</button>
                         </form>
                         <p>{title}</p>
-                        <p>{body}</p>
+                        <div style={{ whiteSpace: "pre-wrap" }}>
+                            {body}
+                        </div>
                         <p>{author}</p>
-                        <p>{category}</p>
+                        <p>{t(category)}</p>
                         <p>{language}</p>
                         <p>selected post id: {existingPost ? existingPost.id : 'None'}</p>
                         <p>{getCurrentDate()}</p>

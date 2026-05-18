@@ -1,6 +1,6 @@
 function Footer(){
     return(
-        <div className="footer">Copyright © 2025 iso-j.github.io JoniNrd... All rights reserved.</div>
+        <div id="footer" className="footer">Copyright © {new Date().getFullYear()} iso-j.github.io JoniNrd... All rights reserved.</div>
     );
 }
 

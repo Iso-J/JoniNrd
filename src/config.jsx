@@ -1,0 +1,1 @@
+export const CDN_BASE = "https://cdn.jsdelivr.net/gh/Iso-J/JoniNrd@gh-pages";

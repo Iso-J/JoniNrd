@@ -10,12 +10,14 @@ function Header({ toggled, setToggled, DropdownActive, setDropDown }) {
         setToggled((s) => !s);
     };
     const languages = ['en', 'fi'];
-    const [currentLanguageIndex, setCurrentIndex] = useState(1);
+    const savedLanguage = sessionStorage.getItem('language');
+    const [currentLanguageIndex, setCurrentIndex] = useState(languages.findIndex(item => item === savedLanguage));
     const inDev = import.meta.env.MODE === 'development';
 
     const setLanguage = () => {
         const nextIndex = (currentLanguageIndex + 1) % languages.length;
         i18n.changeLanguage(languages[nextIndex]);
+        sessionStorage.setItem('language', languages[nextIndex]);
         setCurrentIndex(nextIndex);
     }
 
